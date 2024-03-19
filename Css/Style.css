@@ -1,0 +1,12 @@
+.clockContainer{
+    width: 10%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: azure;
+    justify-content: center;
+    margin: auto;
+    border-radius: 25%;
+}
+.clockContainer h2{
+    font-size: 50px;
+}
