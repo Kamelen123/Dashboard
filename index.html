@@ -12,18 +12,75 @@
         <div class="clockContainer">
             <h2 id="clock"></h2>
         </div>
+        <div class="headlineText">
+            <div id="headline" contenteditable="true">Klicka här för att redigera rubriken</div>
+        </div>
         <main>
             <div class="cards">
                 <div class="card" id="card1">
-                    <h2>Snabblänkar</h2>
-                    <div id="linksContainer">
-                        
-                    </div>
-                    <button onclick="openAddLink()">Add Link</button>
+                    <h2>Links <i class="fa-solid fa-desktop"></i></h2>
+                    <div id="linksContainer"></div>
+                    <button id="addButton" onclick="openAddLink()"><i class="fa-solid fa-plus"></i> Add Link</button>
                 </div>
-                <div class="card" id="card2"></div>
-                <div class="card" id="card3"></div>
-                <div class="card" id="card4"></div>
+                <div class="card" id="card2">
+                    <h2>Weather <i class="fa-solid fa-umbrella"></i></h2>
+                    <div class="weatherCardsContainer">
+                        
+                        <div class="weatherCard" id="todaysWeatherCard">
+                            <div class="weatherDiv">
+                                <p><span id="Emoji"></span></p>
+                            </div>
+                            <div class="temperatureDiv">
+                                <h3>Today</h3>
+                                <div class="temp">
+                                    <div class="textContainer">
+                                        <p><span id="temperature"></span>°C</p>
+                                    </div>
+                                    <div class="textContainer">
+                                        <p id="weather">Snö</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weatherCard" id="tomorrowsWeatherCard">
+                            <div class="weatherDiv">
+                                <p><span id="EmojiT"></span></p>
+                            </div>
+                            <div class="temperatureDiv">
+                                <h3>Tomorrow</h3>
+                                <div class="temp">
+                                    <div class="textContainer">
+                                        <p><span id="temperatureT"></span>°C</p>
+                                    </div>
+                                    <div class="textContainer">
+                                        <p id="weatherT">Snö</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="card3">
+                    <h2>Spotify <i class="fa-solid fa-play"></i></h2>
+                    <div id="spotifyPlaylist">
+                        <iframe
+                        title="Spotify Embed: Recommendation Playlist"
+                        src="https://open.spotify.com/embed/playlist/1wa9HxnvKlJXcFhucHgqnW?utm_source=generator&theme=0"
+                        width="100%"
+                        height="100%"
+                        style="min-height: 360px;"
+                        frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="card" id="card4">
+                    <h2>Notepad <i class="fa-solid fa-book"></i></h2>
+                    <div class="paper">
+                        <textarea name="notess" id="notes" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
             </div>
             <div id="addLinkModal" class="modal">
                 <input type="text" id="linkUrl" placeholder="Enter URL">
@@ -33,7 +90,7 @@
             </div>
         </main>
         <footer>
-            <button onclick="refresh()">Refresh image</button>
+            <button onclick="refresh()"><i class="fa-solid fa-rotate-right"></i> Refresh image</button>
         </footer>
     </div>
 
